@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1.6;
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif; }
+
+.disable-selection {
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  -khtml-user-select: none;
+  /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none;
+  /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+  /* Disable Android and iOS callouts*/ }
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  overflow: hidden;
+  border-bottom: #dddddd solid 1px;
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(187, 187, 187, 0.98);
+  -moz-box-shadow: 0px 1px 3px 1px rgba(187, 187, 187, 0.98);
+  box-shadow: 0px 1px 3px 1px rgba(187, 187, 187, 0.98); }
+
+.layer {
+  position: absolute;
+  width: 100vw;
+  min-height: 70vh;
+  overflow: hidden; }
+  .layer .content-wrap {
+    position: absolute;
+    width: 100vw;
+    min-height: 70vh;
+    font-size: 1.15em; }
+  .layer .content-body {
+    width: 25%;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #222; }
+  .layer img {
+    position: absolute;
+    width: 35%;
+    bottom: 0%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%); }
+  .layer h1 {
+    font-size: 3em;
+    font-weight: 500; }
+
+.bottom {
+  background: #fff;
+  z-index: 1; }
+  .bottom .content-body {
+    right: 15%; }
+  .bottom h1 {
+    color: #C58400; }
+  .bottom .spanLeft {
+    position: relative;
+    left: -25px;
+    opacity: 0;
+    -webkit-transition: 0.75s;
+    -o-transition: 0.75s;
+    transition: 0.75s; }
+  .bottom .spanRight {
+    position: relative;
+    right: -25px;
+    opacity: 0;
+    -webkit-transition: 0.75s;
+    -o-transition: 0.75s;
+    transition: 0.75s; }
+  .bottom h1:hover .spanLeft {
+    position: relative;
+    left: -3px;
+    opacity: 1; }
+  .bottom h1:hover .spanRight {
+    position: relative;
+    right: -3px;
+    opacity: 1; }
+
+.top {
+  background: #fff;
+  color: #666666;
+  z-index: 2;
+  width: 50vw; }
+  .top .content-body {
+    left: 15%;
+    color: #666666; }
+  .top h1 {
+    color: #133CAA; }
+
+.vertical .handle {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  display: block;
+  background-color: #FDAB00;
+  width: 0px;
+  top: 0;
+  left: 50vw;
+  z-index: 3; }
+
+.top {
+  margin-left: -1000px;
+  width: calc(50vw + 1000px); }
+  .top .content-wrap {
+    margin-left: 1000px; }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 75%; } }
+
+.dummy {
+  padding-top: 60px; }
