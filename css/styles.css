@@ -1,11 +1,43 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200");
 body {
+  padding-top: 60px;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
   margin: 0;
-  padding: 0;
   font-size: 100%;
   line-height: 1.6;
-  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif; }
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.navbar {
+  min-height: 60px; }
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 60px;
+  line-height: 60px; }
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 13px */
+  margin-top: 13px;
+  padding: 9px 10px !important; }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 16.5px */
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
+    line-height: 27px; } }
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 62px; } }
+
+#mainNav {
+  background-color: #111 !important; }
 
 .disable-selection {
   -moz-user-select: none;
@@ -22,7 +54,7 @@ body {
 #wrapper {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  height: 70vh;
   overflow: hidden;
   border-bottom: #dddddd solid 1px;
   -webkit-box-shadow: 0px 1px 3px 1px rgba(187, 187, 187, 0.98);
@@ -47,7 +79,7 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    color: #222; }
+    color: #666666; }
   .layer img {
     position: absolute;
     height: 60vh;
@@ -96,10 +128,11 @@ body {
   z-index: 2;
   width: 50vw; }
   .top .content-body {
-    left: 15%;
-    color: #666666; }
+    left: 15%; }
   .top h1 {
-    color: #133CAA; }
+    color: #133CAA;
+    font-size: 3em;
+    font-weight: 500; }
 
 .vertical .handle {
   overflow: hidden;
@@ -123,7 +156,10 @@ body {
     font-size: 75%; } }
 
 .dummy {
-  padding-top: 60px; }
+  height: 600px; }
+
+.ajax {
+  position: relative; }
 
 div.item {
   position: relative;

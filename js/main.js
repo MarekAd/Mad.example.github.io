@@ -71,7 +71,7 @@ var slider = function (){
       var distX = RevMouseX - ItemPosX;
       //Easing motion
      //Progressive reduction of distance
-      ItemPosX += distX/17;
+      ItemPosX += distX/10;
       //move bar and visibility
       handle.style.left = ItemPosX  + 'px';
       topLayer.style.width= vertical + ItemPosX + 'px';

@@ -16,11 +16,12 @@
     <link rel="stylesheet" href="css/loader.css">
 
     <!-- Custom styles for this template -->
-    <link href="css/logo-nav.css" rel="stylesheet">
+    <!-- <link href="css/logo-nav.css" rel="stylesheet"> -->
 
   </head>
 
-  <body>
+  <body id="page-top">
+
     <!-- loading screen -->
     <div id="loader-wrapper">
         <div id="loader"></div>
@@ -34,7 +35,7 @@
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#page-top">
           <img src="logo/Logo.png" width="60" height="30" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,19 +43,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Meet us
+            <li class="nav-item active meet-us">
+              <a class="nav-link" href="#page-top">Meet us
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Graphic&Design</a>
+            <li class="nav-item anna-menu">
+              <a class="nav-link" href="#box">Graphic&Design</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Codding</a>
+            <li class="nav-item marek-menu">
+              <a class="nav-link" href="#box">Codding</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="external.html">Contact</a>
+            <li class="nav-item main-menu">
+              <a class="nav-link" href="#box">Contact</a>
             </li>
           </ul>
         </div>
@@ -102,10 +103,25 @@
     <!-- split screen slider -->
 
     <!--  Dynamically changed contnent -->
-    <div id="box">
-        <h2>Click button to load new content inside DIV box</h2>
+    <div class="ajax">
+      <!-- <div id="Anna_href"></div> -->
+      <div id="box">
+      </div>
     </div>
-    <button type="button">Load Content</button>
+
+    <div class="dummy"></div>
+    <button  id="demo" type="button">Click Me!</button>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -116,22 +132,169 @@
     <!-- Custom JavaScript for this project-->
     <script src="js/main.js"></script>
 
-    <!-- Custom JavaScript for loading content-->
-    <script type="text/javascript">
+    <!-- smooth scrolling -->
+    <script>
     $(document).ready(function(){
-        $("button").click(function(){
-            $("#box").load("external.html", function(responseTxt, statusTxt, jqXHR){
-                if(statusTxt == "success"){
-                    alert("New content loaded successfully!");
-                }
-                if(statusTxt == "error"){
-                    alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
-                }
-            });
-        });
+      // Add scrollspy to <body>
+      //$('body').scrollspy({target: ".navbar", offset:1});
+
+      // Add smooth scrolling on all links inside the navbar
+      $("#mainNav a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1000, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }  // End if
+      });
     });
     </script>
+    <!-- smooth scrolling -->
 
+  <script type="text/javascript">
+  // $( document ).ready(function() {
+  //    console.log(window.innerHeight);
+  // });
+
+  var current = 0;
+
+    $('.bottom').click({param1: "external.html",param2: 2}, change_content);
+    $('.top').click({param1: "anna.html",param2: 1}, change_content);
+    $('.anna-menu').click({param1: "anna.html",param2: 1}, change_content);
+    $('.marek-menu').click({param1: "external.html",param2: 2}, change_content);
+    $('.main-menu').click({param1: "main.html",param2: 0}, change_content);
+    $('.meet-us').click(function(){
+      $('.navbar li').removeClass('active');
+      if (!$('.meet-us').hasClass('active')) {
+        $('.meet-us').addClass('active');
+        //current = -1;
+      }
+    });
+    $('.navbar-brand').click(function(){
+      $('.navbar li').removeClass('active');
+      if (!$('.meet-us').hasClass('active')) {
+        $('.meet-us').addClass('active');
+        //current = -1;
+      }
+    });
+
+    function setActive(curr) {
+      $('.navbar li').removeClass('active');
+      if (curr == 0){
+          if (!$('.main-menu').hasClass('active')) {
+            $('.main-menu').addClass('active');
+          }
+      } else if (curr == 1){
+        if (!$('.anna-menu').hasClass('active')) {
+          $('.anna-menu').addClass('active');
+        }
+      } else if (curr == 2){
+          if (!$('.marek-menu').hasClass('active')) {
+            $('.marek-menu').addClass('active');
+          }
+      }
+    }
+
+    function change_content(event){
+      event.preventDefault();
+      //console.log(event.data.param2 +'  '+ current+' '+event.data.param1);
+      if ( current !== event.data.param2 ){
+      $('#box').fadeOut(750, 'linear', function(){
+          $('#box').load(event.data.param1, function(){
+              $('#box').fadeIn(600,'linear');
+              current = event.data.param2;
+              // make active only proper item of navbar
+                // available: meet-us anna-menu marek-menu main-menu
+              setActive(current);
+            });
+        });
+      } else {
+        setActive(current);
+      }
+  };
+  </script>
+
+  <!-- SVG sphere-->
+  <script src='js/jquery.svg3dtagcloud.min.js'></script>
+  <!-- <script src='js/svg_config.js'></script> -->
+  <script>
+  $('#demo').click(function()
+  { load_svg();}
+  );
+  function load_svg() {
+          console.log('SVG function init');
+         var entries = [
+
+            { image: './img/svg/Javascript.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/jasmine.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/css3.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/forms.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/git.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/github.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/html.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/jquery.gif', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/oracledatabase.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/svn.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/sass.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/bootstrap3.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/ajax.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/plsql.png', width: '100', height: '100', target: '_top', tooltip: 'basic' }
+
+         ];
+
+         var size = 0.45 * window.innerWidth;
+         var settings = {
+
+
+             entries: entries,
+             width: size,
+             height: size,
+             radius: '65%',
+             radiusMin: 90,
+             bgDraw: true,
+             bgColor: '#fff',
+             opacityOver: 1.00,
+             opacityOut: 0.8,
+             opacitySpeed: 6,
+             fov: 800,
+             speed: 0.25,
+             fontFamily: 'Oswald, Arial, sans-serif',
+             fontSize: '15',
+             fontColor: '#222',
+             fontWeight: 'normal',//bold
+             fontStyle: 'normal',//italic
+             fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+             fontToUpperCase: true,
+             tooltipFontFamily: 'Oswald, Arial, sans-serif',
+             tooltipFontSize: '11',
+             tooltipFontColor: '#222',
+             tooltipFontWeight: 'normal',//bold
+             tooltipFontStyle: 'normal',//italic
+             tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+             tooltipFontToUpperCase: true,
+             tooltipTextAnchor: 'left',
+             tooltipDiffX: 0,
+             tooltipDiffY: 10
+
+         };
+
+         //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+         $( '#holder' ).svg3DTagCloud( settings );
+
+  };
+  </script>
   </body>
 
 </html>
