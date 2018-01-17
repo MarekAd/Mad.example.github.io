@@ -54,7 +54,7 @@
               <a class="nav-link" href="#">Codding</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="external.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -101,12 +101,37 @@
     </section>
     <!-- split screen slider -->
 
+    <!--  Dynamically changed contnent -->
+    <div id="box">
+        <h2>Click button to load new content inside DIV box</h2>
+    </div>
+    <button type="button">Load Content</button>
+
+
+
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript for this project-->
     <script src="js/main.js"></script>
+
+    <!-- Custom JavaScript for loading content-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#box").load("external.html", function(responseTxt, statusTxt, jqXHR){
+                if(statusTxt == "success"){
+                    alert("New content loaded successfully!");
+                }
+                if(statusTxt == "error"){
+                    alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
+                }
+            });
+        });
+    });
+    </script>
+
   </body>
 
 </html>
