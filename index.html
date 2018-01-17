@@ -109,12 +109,16 @@
       </div>
     </div>
 
-    <div class="dummy"></div>
-    <button  id="demo" type="button">Click Me!</button>
+    <!-- <div class="dummy"></div> -->
 
 
 
 
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy;Anna Kukieła&amp;Marek Adamczak 2018</small>
+      </div>
+    </div>
 
 
 
@@ -218,6 +222,9 @@
               // make active only proper item of navbar
                 // available: meet-us anna-menu marek-menu main-menu
               setActive(current);
+              if (current ==2){
+                load_svg();
+              }
             });
         });
       } else {
@@ -230,31 +237,29 @@
   <script src='js/jquery.svg3dtagcloud.min.js'></script>
   <!-- <script src='js/svg_config.js'></script> -->
   <script>
-  $('#demo').click(function()
-  { load_svg();}
-  );
+
   function load_svg() {
           console.log('SVG function init');
          var entries = [
 
-            { image: './img/svg/Javascript.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/Javascript.png', width: '100', height: '100', target: '_top', tooltip: 'intermediate' },
             { image: './img/svg/jasmine.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
             { image: './img/svg/css3.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/forms.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/git.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/github.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/html.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/forms.png', width: '100', height: '100', target: '_top', tooltip: 'advanced' },
+            { image: './img/svg/git.png', width: '100', height: '100', target: '_top', tooltip: 'intermediate' },
+            { image: './img/svg/github.png', width: '100', height: '100', target: '_top', tooltip: 'intermediate' },
+            { image: './img/svg/html.png', width: '100', height: '100', target: '_top', tooltip: 'intermediate' },
             { image: './img/svg/jquery.gif', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/oracledatabase.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/svn.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/oracledatabase.png', width: '100', height: '100', target: '_top', tooltip: 'advanced' },
+            { image: './img/svg/svn.png', width: '100', height: '100', target: '_top', tooltip: 'intermediate' },
             { image: './img/svg/sass.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/bootstrap3.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/Ajax.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
-            { image: './img/svg/plsql.png', width: '100', height: '100', target: '_top', tooltip: 'basic' }
+            { image: './img/svg/bootstrap3.png', width: '100', height: '100', target: '_top', tooltip: 'intermediate' },
+            { image: './img/svg/ajax.png', width: '100', height: '100', target: '_top', tooltip: 'basic' },
+            { image: './img/svg/plsql.png', width: '100', height: '100', target: '_top', tooltip: 'advanced' }
 
          ];
 
-         var size = 0.45 * window.innerWidth;
+         var size = 0.6 * window.innerHeight;
          var settings = {
 
 
@@ -270,10 +275,10 @@
              opacitySpeed: 6,
              fov: 800,
              speed: 0.25,
-             fontFamily: 'Oswald, Arial, sans-serif',
-             fontSize: '15',
+             fontFamily: 'proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif',
+             fontSize: '17',
              fontColor: '#222',
-             fontWeight: 'normal',//bold
+             fontWeight: 'bold',//bold
              fontStyle: 'normal',//italic
              fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
              fontToUpperCase: true,
@@ -284,9 +289,9 @@
              tooltipFontStyle: 'normal',//italic
              tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
              tooltipFontToUpperCase: true,
-             tooltipTextAnchor: 'left',
+             tooltipTextAnchor: 'center',
              tooltipDiffX: 0,
-             tooltipDiffY: 10
+             tooltipDiffY: 2
 
          };
 

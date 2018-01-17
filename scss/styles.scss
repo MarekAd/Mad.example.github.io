@@ -1,5 +1,7 @@
 $sliderMinHeight: 70vh;
 $sliderMinHeightImg: 60vh;
+$ajaxMinHeight:60vh;
+
 //$sliderMaxHeight: 50vh;
 
 body{
@@ -213,9 +215,23 @@ body{
 
 .ajax{
   position:relative;
+  min-height: $ajaxMinHeight;
+  margin-top: 60px;
   // min-height: 60px;
   // overflow: auto;
   //border: 5px solid red!important;
+}
+
+.copyright {
+  background: #000000;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 ///////////////////////////////////////// EXTERNAL
