@@ -1,3 +1,5 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
 body {
   margin: 0;
   padding: 0;
@@ -30,12 +32,12 @@ body {
 .layer {
   position: absolute;
   width: 100vw;
-  min-height: 70vh;
+  height: 70vh;
   overflow: hidden; }
   .layer .content-wrap {
     position: absolute;
     width: 100vw;
-    min-height: 70vh;
+    height: 70vh;
     font-size: 1.15em; }
   .layer .content-body {
     width: 25%;
@@ -48,7 +50,7 @@ body {
     color: #222; }
   .layer img {
     position: absolute;
-    width: 35%;
+    height: 60vh;
     bottom: 0%;
     left: 50%;
     -webkit-transform: translate(-50%);
@@ -79,11 +81,11 @@ body {
     -webkit-transition: 0.75s;
     -o-transition: 0.75s;
     transition: 0.75s; }
-  .bottom h1:hover .spanLeft {
+  .bottom .marek-string:hover .spanLeft {
     position: relative;
     left: -3px;
     opacity: 1; }
-  .bottom h1:hover .spanRight {
+  .bottom .marek-string:hover .spanRight {
     position: relative;
     right: -3px;
     opacity: 1; }
@@ -122,3 +124,92 @@ body {
 
 .dummy {
   padding-top: 60px; }
+
+div.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
+
+div.item * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+div.item img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 210px; }
+
+div.item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff; }
+
+div.item a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute; }
+
+div.item.blue {
+  background-color: #34495e; }
+
+div.item.blue i {
+  color: #34495e; }
+
+div.item.red {
+  background-color: #e74c3c; }
+
+div.item.red i {
+  color: #e74c3c; }
+
+div.item.green {
+  background-color: #16a085; }
+
+div.item.green i {
+  color: #16a085; }
+
+div.item:hover img {
+  opacity: 0.3;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+div.item * {
+  -webkit-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out; }
+
+div.item i {
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: -webkit-transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: -webkit-transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -o-transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045), -webkit-transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+
+div.item:hover i {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
