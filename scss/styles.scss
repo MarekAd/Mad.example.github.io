@@ -2,6 +2,13 @@ $sliderMinHeight: 70vh;
 $sliderMinHeightImg: 60vh;
 $ajaxMinHeight:60vh;
 
+$primaryColor1: #007262;
+$primaryColor2: #B64B00;
+$secondaryColor1: #007262;
+$primaryColorText: #007262;
+$secondaryColorText: #B64B00;
+$secondaryItems: #B64B00;
+
 //$sliderMaxHeight: 50vh;
 
 body{
@@ -50,7 +57,7 @@ body{
   }
 }
 #mainNav {
-	background-color: #111!important;
+	background-color: $secondaryColor1!important;
   }
 
 // fin navbar bootstrap3
@@ -131,7 +138,7 @@ body{
    }
 
   h1{
-    color:#C58400;
+    color:$secondaryItems;
   }
     .spanLeft{
       position: relative;
@@ -171,9 +178,34 @@ body{
   }
 
   h1{
-    color:#133CAA;
+    color:$primaryColor1;
     font-size:3em;
     font-weight:500;
+  }
+  .spanLeft{
+    position: relative;
+    left:-25px;
+    opacity:0;
+    transition:0.75s;
+  }
+
+  .spanRight{
+    position: relative;
+    right:-25px;
+    opacity:0;
+    transition:0.75s;
+  }
+
+  .anna-string:hover .spanLeft{
+    position: relative;
+    left:-3px;
+    opacity:1;
+  }
+
+  .anna-string:hover .spanRight{
+    position: relative;
+    right:-3px;
+    opacity:1;
   }
 }
 
@@ -182,7 +214,7 @@ body{
   position: absolute;
   height: 100%;
   display: block;
-  background-color: #FDAB00;
+  background-color: $primaryColor2;
   width:0px; // 5 pc
   top:0;
   left: 50vw;
@@ -206,24 +238,25 @@ body{
   }
 }
 
-.dummy {
-  height: 600px;
-
-}
-
 // async
 
 .ajax{
   position:relative;
   min-height: $ajaxMinHeight;
-  margin-top: 60px;
   // min-height: 60px;
   // overflow: auto;
   //border: 5px solid red!important;
 }
 
+#box{
+  border-bottom: #dddddd solid 1px;
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+  -moz-box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+  box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+}
+
 .copyright {
-  background: #000000;
+  background: $secondaryColor1;
 }
 
 .flex-center{
@@ -233,6 +266,80 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+/// main content
+#contact {
+  background: #fff;
+  // border-bottom: #dddddd solid 1px;
+  // -webkit-box-shadow: 0px -1px 3px 0px rgba(187,187,187,1);
+  // -moz-box-shadow: 0px -1px 3px 0px rgba(187,187,187,1);
+  // box-shadow: 0px -1px 3px 0px rgba(187,187,187,1);
+}
+
+#services{
+  background: #f8f9fa;
+
+}
+.my-4 {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: $primaryColor2; }
+
+.padding-top {
+  padding: 4rem 0 0 0;
+}
+
+.padding-bottom {
+  padding-bottom: 4rem;
+}
+
+.text-primary{
+  color: $primaryColorText!important;
+}
+
+.text-secondary{
+  color: $secondaryColorText!important;
+}
+.text-white{
+  color: #dddddd!important;
+}
+
+.primary_hover:hover {
+  color: lighten($primaryColorText, 65%);
+
+}
+.secondary_hover:hover {
+ color: lighten($secondaryColorText, 50%);
+}
+
+.facebook_hover:hover{
+  color: #fff!important;
+}
+
+
+.anna-link:link, .anna-link:hover, .anna-link:active{
+  text-decoration: none;
+  color: $primaryColorText;
+}
+
+.marek-link:link, .marek-link:hover, .marek-link:active{
+  text-decoration: none;
+  color: $secondaryColorText;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ///////////////////////////////////////// EXTERNAL
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
