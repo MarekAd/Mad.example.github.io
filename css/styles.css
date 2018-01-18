@@ -39,6 +39,10 @@ body {
 #mainNav {
   background-color: #007262 !important; }
 
+.facebook-nav-icon {
+  margin-top: 6px;
+  margin-lef: 12px; }
+
 .disable-selection {
   -moz-user-select: none;
   /* Firefox */
