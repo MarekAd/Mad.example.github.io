@@ -284,10 +284,22 @@ body{
   // box-shadow: 0px -1px 3px 0px rgba(187,187,187,1);
 }
 
+#marek-about{
+  background: #f8f9fa;
+  border-bottom: #dddddd solid 3px!important;
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+  -moz-box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+  box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+}
+
 #services{
   background: #f8f9fa;
-
 }
+
+.my-bg-primary{
+  background:#DDE4E9!important;
+}
+
 .my-4 {
   max-width: 50px;
   border-width: 3px;
@@ -329,20 +341,60 @@ body{
   text-decoration: none;
   color: $primaryColorText;
 }
+.marek-link{
+  text-decoration: none;
+  color: $secondaryColorText;
+}
 
 .marek-link:link, .marek-link:hover, .marek-link:active{
   text-decoration: none;
   color: $secondaryColorText;
 }
 
+.home-section > .codemark {
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.my-text-strong{
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
+
+#holder{
+  //border: 2px solid red!important;
+  text-align: center;
+}
+
+// .opis{
+//   border: 2px solid blue!important;
+// }
+
+
+.marek-list {
+      list-style-type: square;
+      // direction: rtl;  /* Right to Left */
+      // list-style-position: inside;
+  li{
+    font-size: 1.1em;
+    color: $secondaryColorText ;
+  }
+
+}
 
 
 
+.marek-text-pattern {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  // text-align: right;
 
-
-
-
-
+}
 
 
 
