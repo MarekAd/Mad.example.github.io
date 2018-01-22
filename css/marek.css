@@ -256,11 +256,17 @@
   max-height: 35vw !important; }
 
 .btn-primary {
-  background: #007262;
+  background: #000;
   border: none;
   padding: 5px 40px 5px 40px; }
 
 .btn-primary:hover {
-  background: #00816f;
+  background: #080808;
   border: none;
   padding: 5px 40px 5px 40px; }
+
+.svg-text {
+  font-size: 1.4em;
+  color: #B64B00;
+  min-height: 1.1em;
+  font-weight: bold; }

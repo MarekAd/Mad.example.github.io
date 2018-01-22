@@ -41,7 +41,7 @@ body {
     line-height: 27px; } }
 
 #mainNav {
-  background-color: #007262 !important; }
+  background-color: #000 !important; }
 
 .facebook-nav-icon {
   margin-top: 6px;
@@ -138,7 +138,7 @@ body {
   .top .content-body {
     left: 15%; }
   .top h1 {
-    color: #007262;
+    color: #000;
     font-size: 3em;
     font-weight: 500; }
   .top .spanLeft {
@@ -191,7 +191,7 @@ body {
   box-shadow: 0px 1px 3px 1px rgba(187, 187, 187, 0.98); }
 
 .copyright {
-  background: #007262; }
+  background: #000; }
 
 #contact {
   background: #fff; }
@@ -211,7 +211,7 @@ body {
   padding-bottom: 4rem; }
 
 .text-primary {
-  color: #007262 !important; }
+  color: #000 !important; }
 
 .text-secondary {
   color: #B64B00 !important; }
@@ -220,7 +220,7 @@ body {
   color: #dddddd !important; }
 
 .primary_hover:hover {
-  color: #bffff6; }
+  color: #a6a6a6; }
 
 .secondary_hover:hover {
   color: #ffd4b6; }
@@ -230,7 +230,7 @@ body {
 
 .anna-link:link, .anna-link:hover, .anna-link:active {
   text-decoration: none;
-  color: #007262; }
+  color: #000; }
 
 .marek-link {
   text-decoration: none;

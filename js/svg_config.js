@@ -6,22 +6,22 @@ function load_svg() {
 
        var entries = [
 
-          { image: './img/marek/svg_images/Javascript.png', width: iconSize, height: iconSize,   tooltip: 'intermediate' },
-          { image: './img/marek/svg_images/jasmine.png', width: iconSize, height: iconSize,   tooltip: 'basic' },
-          { image: './img/marek/svg_images/css3.png', width: iconSize, height: iconSize,   tooltip: 'basic' },
-          { image: './img/marek/svg_images/forms.png', width: iconSize, height: iconSize,   tooltip: 'advanced' },
-          { image: './img/marek/svg_images/git.png', width: iconSize, height: iconSize,   tooltip: 'intermediate' },
-          { image: './img/marek/svg_images/github.png', width: iconSize, height: iconSize,   tooltip: 'intermediate' },
-          { image: './img/marek/svg_images/html.png', width: iconSize, height: iconSize,   tooltip: 'intermediate' },
-          { image: './img/marek/svg_images/jquery.gif', width: iconSize, height: iconSize,   tooltip: 'basic' },
-          { image: './img/marek/svg_images/oracledatabase.png', width: iconSize, height: iconSize,   tooltip: 'advanced' },
-          { image: './img/marek/svg_images/svn.png', width: iconSize, height: iconSize,   tooltip: 'intermediate' },
-          { image: './img/marek/svg_images/sass.png', width: iconSize, height: iconSize,   tooltip: 'basic' },
-          { image: './img/marek/svg_images/bootstrap3.png', width: iconSize, height: iconSize,   tooltip: 'intermediate' },
-          { image: './img/marek/svg_images/ajax.png', width: iconSize, height: iconSize,   tooltip: 'basic' },
-          { image: './img/marek/svg_images/plsql.png', width: iconSize, height: iconSize,   tooltip: 'advanced' },
-          { image: './img/marek/svg_images/rwd.png', width: 1.25*iconSize, height: 1.25*iconSize,   tooltip: 'advanced' },
-          { image: './img/marek/svg_images/sql.png', width: iconSize, height: iconSize,   tooltip: 'advanced' }
+          { image: './img/marek/svg_images/Javascript.png', width: iconSize, height: iconSize,   tooltip: 'Javascript: intermediate' },
+          { image: './img/marek/svg_images/jasmine.png', width: iconSize, height: iconSize,   tooltip: 'Jasmine: basic' },
+          { image: './img/marek/svg_images/css3.png', width: iconSize, height: iconSize,   tooltip: 'CSS3: basic' },
+          { image: './img/marek/svg_images/forms.png', width: iconSize, height: iconSize,   tooltip: 'Oracle Forms: advanced' },
+          { image: './img/marek/svg_images/git.png', width: iconSize, height: iconSize,   tooltip: 'Git: intermediate' },
+          { image: './img/marek/svg_images/github.png', width: iconSize, height: iconSize,   tooltip: 'GitHub: intermediate' },
+          { image: './img/marek/svg_images/html.png', width: iconSize, height: iconSize,   tooltip: 'HTML5: intermediate' },
+          { image: './img/marek/svg_images/jquery.gif', width: iconSize, height: iconSize,   tooltip: 'jQuery: basic' },
+          { image: './img/marek/svg_images/oracledatabase.png', width: iconSize, height: iconSize,   tooltip: 'Oracle DB: advanced' },
+          { image: './img/marek/svg_images/svn.png', width: iconSize, height: iconSize,   tooltip: 'SVN: intermediate' },
+          { image: './img/marek/svg_images/sass.png', width: iconSize, height: iconSize,   tooltip: 'SASS: basic' },
+          { image: './img/marek/svg_images/bootstrap3.png', width: iconSize, height: iconSize,   tooltip: 'Bootstrap3: intermediate' },
+          { image: './img/marek/svg_images/ajax.png', width: iconSize, height: iconSize,   tooltip: 'Ajax: basic' },
+          { image: './img/marek/svg_images/plsql.png', width: iconSize, height: iconSize,   tooltip: 'PL/SQL: advanced' },
+          { image: './img/marek/svg_images/rwd.png', width: 1.25*iconSize, height: 1.25*iconSize,   tooltip: 'RWD: intermediate' },
+          { image: './img/marek/svg_images/sql.png', width: iconSize, height: iconSize,   tooltip: 'SQL: advanced' }
        ];
 
        var settings = {
@@ -44,14 +44,14 @@ function load_svg() {
            fontWeight: 'bold',//bold
            fontStyle: 'normal',//italic
            fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-           fontToUpperCase: true,
+           fontToUpperCase: false,
            tooltipFontFamily: 'Oswald, Arial, sans-serif',
-           tooltipFontSize: '11',
+           tooltipFontSize: '0',
            tooltipFontColor: '#B64B00',
            tooltipFontWeight: 'normal',//bold
            tooltipFontStyle: 'normal',//italic
            tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-           tooltipFontToUpperCase: true,
+           tooltipFontToUpperCase: false,
            tooltipTextAnchor: 'center',
            tooltipDiffX: 0,
            tooltipDiffY: 2
