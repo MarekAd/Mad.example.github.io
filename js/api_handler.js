@@ -8,6 +8,7 @@ XHR.onreadystatechange = function(){
   if(XHR.readyState == 4 && XHR.status == 200) {
     ApiText.innerText = XHR.responseText;
   } else{
+    console.log("Error", XHR.statusText);
     ApiText.innerText = "Please click generate again, API didn't respond.";
   }
 }
