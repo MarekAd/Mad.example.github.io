@@ -270,7 +270,7 @@ body{
   color: $secondaryColorText!important;
 }
 .text-white{
-  color: #dddddd!important;
+  color: $whitest!important;
 }
 
 .primary_hover:hover {
@@ -282,7 +282,7 @@ body{
 }
 
 .facebook_hover:hover{
-  color: $whitest!important;
+  color: $white!important;
 }
 
 .anna-link:link, .anna-link:hover, .anna-link:active{
