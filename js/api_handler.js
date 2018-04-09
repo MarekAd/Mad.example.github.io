@@ -47,17 +47,23 @@ var ApiText = document.querySelector("#ApiText");
 
 //listen for clicks
 btn.addEventListener("click", function(){
-//make the request
-  $.ajax({
-  async: false,
-  url: "https://numbersapi.p.mashape.com/"+mm+"/"+dd+"/date",
-  headers: {"X-Mashape-Key": "SBA6W6tq4UmshgJDIFqIOjAp6MIBp1JfBiijsn72d6TJpXr2ZT", "Accept": "text/plain"},
-  success: function(data) {
-          //console.log(data);
-           ApiText.innerText = data;
-        },
-  error: function(data) {
-          console.log(data);
-        }
+  //make the request
+  UpdateDateFact();
   })
-})
+
+
+function UpdateDateFact(){
+  //make the request
+    $.ajax({
+    async: false,
+    url: "https://numbersapi.p.mashape.com/"+mm+"/"+dd+"/date",
+    headers: {"X-Mashape-Key": "SBA6W6tq4UmshgJDIFqIOjAp6MIBp1JfBiijsn72d6TJpXr2ZT", "Accept": "text/plain"},
+    success: function(data) {
+            //console.log(data);
+             ApiText.innerText = data;
+          },
+    error: function(data) {
+            console.log(data);
+          }
+    })
+}

@@ -55,9 +55,9 @@ var slider = function (){
     function getMouse(e){
       // dynamics
       if (mouseIsOver === true){
-        if (e.pageX < 0.4 * (WindowWidth/2) ){
+        if (e.pageX < 0.4 * (WindowWidth) ){
           MouseX = 0.8 * e.pageX;
-        } else if (e.pageX > 0.6 * (WindowWidth/2) ) {
+        } else if (e.pageX > 0.6 * (WindowWidth) ) {
           MouseX = 1.2 * e.pageX;
         }
         else{
