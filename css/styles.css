@@ -12,10 +12,6 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 75%; } }
-
 @media (min-width: 992px) {
   body {
     padding-top: 62px; } }
@@ -96,9 +92,6 @@ body {
     -webkit-transform: translate(-50%);
     -ms-transform: translate(-50%);
     transform: translate(-50%); }
-  .layer h1 {
-    font-size: 3em;
-    font-weight: 500; }
 
 .bottom {
   background: #fff;
@@ -141,9 +134,7 @@ body {
   .top .content-body {
     left: 15%; }
   .top h1 {
-    color: #000;
-    font-size: 3em;
-    font-weight: 500; }
+    color: #000; }
   .top .spanLeft {
     position: relative;
     left: -25px;
@@ -253,3 +244,65 @@ body {
 
 #holder {
   text-align: center; }
+
+#mobileOnly {
+  display: none;
+  padding-top: 16px; }
+  #mobileOnly h1 {
+    text-align: center; }
+  #mobileOnly p {
+    text-align: center; }
+  #mobileOnly img {
+    max-width: 100%; }
+
+@media (max-width: 1200px) {
+  .layer .content-wrap {
+    font-size: 1.07em; }
+  .layer h1 {
+    font-size: 2em;
+    font-weight: 400; } }
+
+@media (max-width: 541px) {
+  .layer .content-wrap {
+    font-size: 1.0em; } }
+
+@media (max-width: 321px) {
+  .layer .content-wrap {
+    font-size: 0.9em; } }
+
+@media (max-width: 1320px) {
+  .top .content-body {
+    left: 10%; }
+  .bottom .content-body {
+    right: 10%; } }
+
+@media (max-width: 1100px) {
+  .top .content-body {
+    left: 5%; }
+  .bottom .content-body {
+    right: 5%; } }
+
+@media (max-width: 960px) {
+  #wrapper.vertical.disable-selection {
+    display: none; }
+  #mobileOnly {
+    display: block;
+    padding: 10px; }
+    #mobileOnly p.customHeading {
+      padding: 40px 0 10px 0;
+      margin: 0;
+      font-size: 30px; }
+    #mobileOnly h2 {
+      padding: 10px 0 0 0;
+      text-align: center;
+      font-size: 25px; }
+    #mobileOnly p {
+      text-align: center;
+      font-size: 16px; }
+    #mobileOnly .marasejro {
+      color: #D15D00; }
+    #mobileOnly hr {
+      max-width: 60%;
+      border-width: 1px;
+      border-color: #c3c0c0;
+      margin: 28px auto 0 auto; } }

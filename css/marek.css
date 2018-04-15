@@ -15,9 +15,16 @@
 
 .marek-list {
   list-style-type: square; }
+  @media (max-width: 1200px) {
+    .marek-list p {
+      font-size: 0.85em;
+      line-height: 1.4; } }
   .marek-list li {
     font-size: 1.1em;
     color: #D15D00; }
+    @media (max-width: 1200px) {
+      .marek-list li {
+        font-size: 1.0em; } }
 
 .list-center {
   list-style-type: none;
@@ -215,20 +222,24 @@
   position: relative;
   width: 15vh;
   height: 15vh;
-  max-height: 15vw;
-  max-width: 15vw;
   cursor: pointer; }
+  @media (max-width: 960px) {
+    .img-container {
+      width: 200px;
+      height: 200px; } }
 
 .img-small1 {
   opacity: 1;
   display: block;
   height: 15vh;
-  max-height: 15vw;
   -webkit-transition: 0.75s ease;
   -o-transition: 0.75s ease;
   transition: 0.75s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
+  @media (max-width: 960px) {
+    .img-small1 {
+      height: 200px; } }
 
 .img-middle1 {
   -webkit-transition: 0.75s ease;

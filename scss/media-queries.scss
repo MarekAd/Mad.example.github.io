@@ -1,0 +1,99 @@
+// media-queries
+$mediaSmall: 321px;
+$mediaMid: 541px;
+$mediaLarge: 1200px;
+
+#mobileOnly {
+  display: none;
+  padding-top: 16px;
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $mediaLarge) {
+  .layer .content-wrap{
+    font-size:1.07em;
+  }
+  .layer h1{
+    font-size:2em;
+    font-weight:400;
+  }
+}
+@media (max-width: $mediaMid) {
+  .layer .content-wrap{
+    font-size:1.0em;
+  }
+}
+@media (max-width: $mediaSmall) {
+  .layer .content-wrap{
+    font-size:0.9em;
+  }
+}
+
+// Czapas code
+@media (max-width: 1320px) {
+  .top .content-body {
+    left: 10%;
+  }
+  .bottom .content-body {
+    right: 10%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .top .content-body {
+    left: 5%;
+  }
+  .bottom .content-body {
+    right: 5%;
+  }
+}
+
+@media (max-width: 960px) {
+  #wrapper.vertical.disable-selection {
+    display: none;
+  }
+
+  #mobileOnly {
+    display: block;
+    padding: 10px;
+
+    p.customHeading {
+      padding: 40px 0 10px 0;
+      margin: 0;
+      font-size: 30px;
+    }
+
+    h2 {
+      padding: 10px 0 0 0;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .marasejro {
+      color: $primaryColor2;
+    }
+
+    hr {
+      max-width: 60%;
+      border-width: 1px;
+      border-color: #c3c0c0;
+      margin: 28px auto 0 auto;
+    }
+  }
+}

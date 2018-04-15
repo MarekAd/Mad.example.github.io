@@ -17,7 +17,7 @@ body{
 
 @media(max-width:768px){
   body{
-    font-size:75%;
+    //font-size:75%;
   }
 }
 @media (min-width: 992px) {
@@ -112,10 +112,6 @@ body{
     transform:translate(-50%);
   }//.layer
 
-  h1{
-    font-size:3em;
-    font-weight:500;
-  }
 }
 
 .bottom{
@@ -172,8 +168,6 @@ body{
 
   h1{
     color:$primaryColor1;
-    font-size:3em;
-    font-weight:500;
   }
   .spanLeft{
     position: relative;
@@ -314,3 +308,5 @@ body{
 #holder{
   text-align: center;
 }
+
+@import "media-queries";

@@ -8,7 +8,7 @@
 
     <title>AnnaKukieła&MarekAdamczak</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- logo -->
     <link rel="icon" type="image/png" href="logo/ikona.png">
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
         <a class="navbar-brand" href="#page-top">
           <img src="logo/Logo.png" width="40" height="28" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -47,7 +47,6 @@
               <li><a href="https://www.facebook.com/akukielaphoto/"target="_blank"><i class="fa fa-facebook-square fa-2x text-white facebook-nav-icon facebook_hover"></i></a></li>
           </ul>
         </div>
-
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active meet-us">
               <a class="nav-link" href="#page-top">Meet us
@@ -86,7 +85,6 @@
                 who focuses on UI/UX Design.
               </p>
             </div>
-
             <img class="slide-image-mid1" src="img/mid_layer_img1.png" alt="">
             <img class="slide-image1" src="img/image1.png" alt="">
           </div>
@@ -98,23 +96,31 @@
           <div class="content-wrap">
             <div class="content-body anna-string z-top">
               <h1>
-                  <span class="spanLeft">&lsqb;</span>photographer<span class="spanRight">&rsqb;</span>
+                <span class="spanLeft">&lsqb;</span>photographer<span class="spanRight">&rsqb;</span>
               </h1>
               <p><span class="text-primary">Anna Kukieła</span> </br>Artistic mind and graphic designer skilled in image processing and the art of photography.
               </p>
             </div>
-
             <img class="slide-image-mid2" src="img/mid_layer_img2.png" alt="">
             <img class="slide-image2" src="img/image2.png" alt="">
-
           </div>
         </div>
       </a>
-
       <div class="handle"></div>
     </section>
     <!-- split screen slider -->
-
+    <section id="mobileOnly">
+      <!-- <hr> -->
+      <p class="customHeading"><span class="spanLeft">&lsqb;</span>photographer<span class="spanRight">&rsqb;</span></p>
+      <img class="slide-image2" src="img/image2.png" alt="">
+      <h2>Anna Kukieła</h2>
+      <p>Artistic mind and graphic designer skilled in image processing and the art of photography.</p>
+      <hr>
+      <p class="customHeading marasejro"><span class="spanLeft">&lt;</span>coder<span class="spanRight">&gt;</span></p>
+      <img class="slide-image1" src="img/image1.png" alt="">
+      <h2 class="marasejro">Marek Adamczak</h2>
+      <p>Back-end developer for full time and front-end enthusiast after work who focuses on UI/UX Design.</p>
+    </section>
     <!--  Dynamically changed contnent -->
     <div class="ajax">
       <div id="box">
@@ -128,7 +134,7 @@
                     <h5 class="section-subheading text-muted">We're ready to put all our experience in your project</h5>
                   </div>
                 </div>
-                <div class="row text-center padding-top">
+                <div class="row text-center padding-top services">
                   <div class="col-md-3">
                     <span class="fa-stack fa-4x sr-icons">
                       <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -269,14 +275,16 @@
     <!-- collapse navar when clicked on mobile -->
     <script type="text/javascript">
       $(document).ready(function () {
-        $(".navbar-nav li a").click(function(event) {
-          $(".navbar-collapse").collapse('hide');
-        });
+        $('button.navbar-toggler').hover(
+            function() {
+              $('#navbarResponsive' ).slideDown();
+            }, function() {
+              $( '#navbarResponsive' ).slideUp();
+            }
+          );
       });
     </script>
-
     <!-- API handler -->
     <!-- <script src="js/api_handler.js"></script> -->
-
   </body>
 </html>

@@ -1,4 +1,4 @@
-  <!-- smooth scrolling -->
+  // <!-- smooth scrolling -->
     $(document).ready(function(){
       // Add scrollspy to <body>
       //$('body').scrollspy({target: ".navbar", offset:1});
@@ -25,9 +25,9 @@
         }  // End if
       });
     });
-    <!-- smooth scrolling -->
-    
-    <!-- smooth scrolling ON SLIDER -->
+    // <!-- smooth scrolling -->
+
+    // <!-- smooth scrolling ON SLIDER -->
     $(document).ready(function(){
       // Add scrollspy to <body>
       //$('body').scrollspy({target: ".navbar", offset:1});
@@ -54,4 +54,4 @@
         }  // End if
       });
     });
-    <!-- smooth scrolling ON SLIDER-->
+    // <!-- smooth scrolling ON SLIDER-->
