@@ -1,0 +1,11 @@
+@media (max-width: 320px) {
+  .content-wrap {
+    font-size: 0.5em; } }
+
+@media (max-width: 540px) {
+  .content-wrap {
+    font-size: 0.6em; } }
+
+@media (max-width: 960px) {
+  .content-wrap {
+    font-size: 0.75em; } }

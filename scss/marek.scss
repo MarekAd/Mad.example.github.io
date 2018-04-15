@@ -1,0 +1,391 @@
+@import "variables";
+
+#marek-about{
+  background: $whiter;
+  border-bottom: #dddddd solid 3px!important;
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+  -moz-box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+  box-shadow: 0px 1px 3px 1px rgba(187,187,187,0.98);
+}
+
+.home-section > .codemark {
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.text-strong {
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.marek-list {
+  list-style-type: square;
+  // direction: rtl;  /* Right to Left */
+
+  p {
+    @media (max-width: 1200px) {
+      font-size: 0.85em;
+      line-height: 1.4;
+      }
+  }
+
+  li{
+    font-size: 1.1em;
+    color: $secondaryColorText ;
+
+    @media (max-width: 1200px) {
+      font-size: 1.0em;
+    }
+  }
+}
+
+.list-center{
+  list-style-type: none;
+  list-style-position: inside;
+  li{
+    font-size: 1.1em;
+    color: $secondaryColorText;
+  }
+}
+
+.marek-text-pattern {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.marek-svg-pattern {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#portfolio .portfolio-item {
+  right: 0;
+  margin: 0 0 15px; }
+  #portfolio .portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer; }
+    #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      opacity: 0;
+      background: rgba(182, 75, 0, 0.65); }
+      #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+        opacity: 1; }
+      #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 20px;
+        margin-top: -12px;
+        text-align: center;
+        color: white; }
+        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+          margin-top: -12px; }
+        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+          margin: 0; }
+  #portfolio .portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    background-color: $whitest; }
+    #portfolio .portfolio-item .portfolio-caption h4 {
+      margin: 0;
+      text-transform: none; }
+    #portfolio .portfolio-item .portfolio-caption p {
+      font-size: 16px;
+      font-style: italic;
+      margin: 0;
+      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+#portfolio * {
+  z-index: 50; }
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px; } }
+
+.portfolio-modal {
+  padding-right: 0px !important; }
+  .portfolio-modal .modal-dialog {
+    margin: 1rem;
+    max-width: 100vw;
+  }
+  .portfolio-modal .modal-content {
+    padding: 100px 0;
+    text-align: center;
+    }
+    .portfolio-modal .modal-content h2 {
+      font-size: 3em;
+      margin-bottom: 15px; }
+    .portfolio-modal .modal-content p {
+      margin-bottom: 30px; }
+    .portfolio-modal .modal-content p.item-intro {
+      font-size: 16px;
+      font-style: italic;
+      margin: 20px 0 30px;
+      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .portfolio-modal .modal-content ul.list-inline {
+      margin-top: 0;
+      margin-bottom: 30px; }
+    .portfolio-modal .modal-content img {
+      margin-bottom: 30px; }
+    .portfolio-modal .modal-content button {
+      cursor: pointer; }
+  .portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    background-color: transparent; }
+    .portfolio-modal .close-modal:hover {
+      opacity: 0.3; }
+    .portfolio-modal .close-modal .lr {
+      /* Safari and Chrome */
+      z-index: 1051;
+      width: 1px;
+      height: 75px;
+      margin-left: 35px;
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: #212529; }
+      .portfolio-modal .close-modal .lr .rl {
+        /* Safari and Chrome */
+        z-index: 1052;
+        width: 1px;
+        height: 75px;
+        /* IE 9 */
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-color: #212529; }
+
+
+.outer-div{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: center;
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+}
+
+.img-container{
+    position: relative;
+    width: 15vh;
+    height: 15vh;
+    // max-height: 15vw;
+    // max-width: 15vw;
+    cursor:pointer;
+
+    @media (max-width: 960px) {
+      width: 200px;
+      height: 200px;
+    }
+}
+
+.img-small1 {
+  opacity: 1;
+  display: block;
+  height: 15vh;
+  // max-height: 15vw;
+  transition: 0.75s ease;
+  backface-visibility: hidden;
+  @media (max-width: 960px) {
+    height: 200px;
+  }
+}
+.img-middle1 {
+  transition: 0.75s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.img-container:hover .img-small1  {
+  opacity: 0.3;
+}
+
+.img-container:hover .img-middle1   {
+  background-color: rgba(182, 75, 0, 0.45);
+  opacity: 1;
+}
+
+.img-text1 {
+  color: white;
+  margin: -13px;
+
+
+}
+.img-text1-centerer{
+  margin: 50% 50%;
+}
+
+*:focus {
+    outline: none;
+}
+
+.img-wow{
+  height: 35vh!important;
+  width: auto;
+  max-height: 35vw!important;
+}
+
+.btn-primary {
+  background: $primaryColorText;
+  border: none;
+  padding: 5px 40px 5px 40px;
+  outline: none!important;
+}
+.btn-primary:active {
+  background: $primaryColorText!important;
+  border: none;
+  padding: 5px 40px 5px 40px;
+  outline: none!important;
+}
+.btn-primary:focus{
+  background: $primaryColorText!important;
+  border: none;
+  padding: 5px 40px 5px 40px;
+  outline: none!important;
+}
+
+.btn-primary:hover{
+  background: $secondaryColorText; //lighten($primaryColorText, 3%);
+  border: none;
+  padding: 5px 40px 5px 40px;
+}
+
+.svg-text{
+  font-size: 1.4em;
+  color: $secondaryColorText ;
+  min-height: 1.1em;
+  font-weight: bold;
+}
+
+#ApiText{
+  min-height: 4.0em;
+}
+
+.no-margin{
+  padding: 0!important;
+  margin: 0!important;
+}
+
+// progress-bars
+#skill {
+	list-style: none;
+	width: 80%;
+	margin: 10px auto 0;
+	position: relative;
+	line-height: 1.3em;
+	padding: 10px 0;
+}
+
+#skill li {
+	margin-bottom:30px;
+	background:#e9e5e2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ddd9), to(#e9e5e2));
+	background-image: -webkit-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: -moz-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: -ms-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: -o-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: linear-gradient(top, #e1ddd9, #e9e5e2);
+	height:20px;
+	border-radius:10px;
+	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+	box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+}
+
+#skill li h3 {
+	position:relative;
+	top:-25px;
+}
+
+.bar {
+	height:18px;
+	margin:1px 2px;
+	position:absolute;
+  left: 0%;
+	border-radius:10px;
+	-moz-box-shadow: 0 1px 0px $white inset, 0 1px 0 #bebbb9;
+	-webkit-box-shadow: 0 1px 0px $white inset, 0 1px 0 #bebbb9;
+	box-shadow: 0 1px 0px $white inset, 0 1px 0 #bebbb9;
+}
+
+$barJs: 80%;
+$barWebDev: 50%;
+$barJava: 5%;
+
+.bar1-js {
+	width:$barJs;
+	-moz-animation:bar1-js 2s ease-out;
+	-webkit-animation:bar1-js 2s ease-out;
+	background-color: $barColor1;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($barColor1), to($barColor2));
+	background-image: -webkit-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -moz-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -ms-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -o-linear-gradient(top, $barColor1, $barColor2);
+	background-image: linear-gradient(top, $barColor1, $barColor2);
+}
+
+.bar2-webdev {
+	width:$barWebDev;
+	-moz-animation:bar2-webdev 2s ease-out;
+	-webkit-animation:bar2-webdev 2s ease-out;
+	background-color: $barColor1;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($barColor1), to($barColor2));
+	background-image: -webkit-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -moz-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -ms-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -o-linear-gradient(top, $barColor1, $barColor2);
+	background-image: linear-gradient(top, $barColor1, $barColor2);
+}
+.bar3-java {
+	width:$barJava;
+	-moz-animation:bar3-java 2s ease-out;
+	-webkit-animation:bar3-java 2s ease-out;
+	background-color: $barColor1;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($barColor1), to($barColor2));
+	background-image: -webkit-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -moz-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -ms-linear-gradient(top, $barColor1, $barColor2);
+	background-image: -o-linear-gradient(top, $barColor1, $barColor2);
+	background-image: linear-gradient(top, $barColor1, $barColor2);
+}
+@-moz-keyframes bar1-js {0%  { width:0px;} 100%{ width:$barJs;}  }
+@-webkit-keyframes bar1-js       { 0%  { width:0px;} 100%{ width:$barJs;}  }
+
+@-moz-keyframes bar2-webdev {0%  { width:0px;} 100%{ width:$barWebDev;}  }
+@-webkit-keyframes bar2-webdev       { 0%  { width:0px;} 100%{ width:$barWebDev;}  }
+
+@-moz-keyframes bar3-java {0%  { width:0px;} 100%{ width:$barJava;}  }
+@-webkit-keyframes bar3-java       { 0%  { width:0px;} 100%{ width:$barJava;}  }
