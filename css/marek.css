@@ -278,6 +278,39 @@
   width: auto;
   max-height: 35vw !important; }
 
+.Cv-handler {
+  text-align: center; }
+  .Cv-handler a {
+    text-decoration: none;
+    font-size: 1.25em;
+    color: #D15D00;
+    min-height: 1.1em;
+    padding-top: none; }
+    .Cv-handler a .spanLeft {
+      position: relative;
+      left: -25px;
+      opacity: 0;
+      -webkit-transition: 0.75s;
+      -o-transition: 0.75s;
+      transition: 0.75s; }
+    .Cv-handler a .spanRight {
+      position: relative;
+      right: -25px;
+      opacity: 0;
+      -webkit-transition: 0.75s;
+      -o-transition: 0.75s;
+      transition: 0.75s; }
+
+.Cv-handler:hover .spanLeft {
+  position: relative;
+  left: -3px;
+  opacity: 1; }
+
+.Cv-handler:hover .spanRight {
+  position: relative;
+  right: -3px;
+  opacity: 1; }
+
 .btn-primary {
   background: #000;
   border: none;
