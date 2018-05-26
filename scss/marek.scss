@@ -257,6 +257,43 @@
   max-height: 35vw!important;
 }
 
+.Cv-handler{
+        text-align: center;
+    a{
+        text-decoration: none;
+        font-size: 1.25em;
+        color: $secondaryColorText;
+        min-height: 1.1em;
+        padding-top:none;
+
+        .spanLeft{
+          position: relative;
+          left:-25px;
+          opacity:0;
+          transition:0.75s;
+        }
+
+        .spanRight{
+          position: relative;
+          right:-25px;
+          opacity:0;
+          transition:0.75s;
+        }
+    }
+}
+
+.Cv-handler:hover .spanLeft{
+  position: relative;
+  left:-3px;
+  opacity:1;
+}
+
+.Cv-handler:hover .spanRight{
+  position: relative;
+  right:-3px;
+  opacity:1;
+}
+
 .btn-primary {
   background: $primaryColorText;
   border: none;
